@@ -1,0 +1,12 @@
+<%- include("header") -%> 
+<h1>Home</h1>
+<p><%= homeContent %> </p>  
+<% for( let i = 0; i < konten.length; i++ ) { %>
+   <h1><%= konten[i].judul %></h1>
+    <p><%= konten[i].isi.substring(0,100)+"....." %></p>
+      <a href="/post/<%= konten[i].judul%> ">read more</a>
+
+<% } %>
+
+
+<%- include("footer") -%> 
